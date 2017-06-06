@@ -149,6 +149,7 @@ mod <- aov(pop ~ lifeExp, data=gapminder)
 mod
 attributes(xlist)
 attributes(mod)
+names(mod)
 mod$df.residual
 mod$residuals
 mod$rank
