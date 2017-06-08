@@ -1,0 +1,49 @@
+---
+title: "15InitialRMarkdown"
+author: "Hongwei"
+date: "6/8/2017"
+output: html_document
+---
+```{r global_options, echo = FALSE}
+knitr::opts_chunk$set(fig.path = "Figs/", message = FALSE, warning = FALSE,
+                      echo = TRUE, fig.width = 11, results = "hide")
+```
+
+* bold with double-asterisks **text**
+* italics with underscores _text_
+* code-type font with backticks `code`
+- you can make a bulleted list by writing a list with hyphens(-) or asterisks(*)
+
+1. you can make a numbered list by
+2. just using numbers.
+2. you can use the same number over and over if you want.
+
+# You can make section headers of different sizes 
+## by initiating a line 
+### with some number of (#) symbols
+
+## A bit more Markdown
+* hyperlinks: [text to show](http://page.com)
+* image: ![caption](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Google-favicon-2015.png/150px-Google-favicon-2015.png)
+* subscripts: F~2~
+* superscripts: F^2^
+* LaTex: math euations: 
+    * formula1: $E = mc^2$
+    * formula2: $$y = \mu + \sum_{i=1}^p \beta_i x_i + \epsilon$$
+
+## R code chunks
+```{r load_data}
+gapminder <- read.csv("../data/gapminder-FiveYearData.csv")
+gapminder
+```
+
+```{r print}
+library("ggplot2")
+ggplot(gapminder, aes(x = year, y = lifeExp, color = continent)) +
+  geom_point()
+```
+
+## Inline R code
+try round(2.03, 2) = `r round(2.03, 1)`
+
+
